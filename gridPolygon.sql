@@ -34,8 +34,13 @@ $$;
 
 
 --how to use this function
-select point_distributor(23.501678,42.793522,41.246754,63.579232,20,20);
+select point_distributor(POINT1_LATTITUDE,
+                         POINT2_LATTITUDE,
+						 POINT1_LONGTITUDE,
+						 POINT2_LONGTITUDE,
+						 X,
+						 Y);
 
---now select the created table and see the points
-select st_setsrid(st_makepoint(lat,long),4326) from tbl_grid;
+--now select the created table and see the points , my srid is = 4326
+select st_setsrid(st_makepoint(lat,long), integer SRID) from tbl_grid;
 
