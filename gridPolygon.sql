@@ -42,5 +42,5 @@ select point_distributor(POINT1_LATTITUDE,
 						 Y);
 
 --now select the created table and see the points , my srid is = 4326
-select st_setsrid(st_makepoint(lat,long), integer SRID) from tbl_grid;
+select st_setsrid(st_makepoint(long,lat), integer SRID) from tbl_grid;
 
